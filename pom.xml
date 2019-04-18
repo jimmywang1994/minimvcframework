@@ -44,6 +44,18 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
+        <plugin>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-maven-plugin</artifactId>
+          <version>9.4.16.v20190411</version>
+          <configuration>
+            <httpConnector>
+              <port>8080</port>
+              <host>localhost</host>
+            </httpConnector>
+            <scanIntervalSeconds>1</scanIntervalSeconds>
+          </configuration>
+        </plugin>
         <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
